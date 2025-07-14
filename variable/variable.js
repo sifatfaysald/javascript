@@ -1,24 +1,38 @@
-let userName = 'Sifat Faysal';
-let profession = 'Software Engineer';
-const userId = 14;
+// --- Local Scope Example ---
+function myRoom() {
+    let secretBox = 'Money';
+    console.log('Inside myRoom:', secretBox); // This works: secretBox is accessible inside the function
+}
 
-let person = 'Sifat';
-let some_thing = 'Anything';
-let _canI = 'yes';
-let $salary = '1000k'
+myRoom();
+// console.log(secretBox); // ❌ This would cause an error: secretBox is not accessible outside myRoom()
 
-console.log(person);
-console.log(some_thing);
-console.log(_canI);
-console.log($salary);
 
-let myName = 'Sifat';
-console.log(myName);
+// --- Global Scope Example ---
+let everyoneKnows = 'I love tomato';
 
-let welcomeMessage = `How` + ` are you?`
-console.log(welcomeMessage);
-console.log(typeof welcomeMessage);
-console.log(typeof userId);
+function tellSecret() {
+    console.log('Inside tellSecret:', everyoneKnows); // ✅ This works: global variables are accessible inside functions
+}
 
-myName = 'Sifat Faysal';
-console.log(myName);
+tellSecret();
+console.log('Outside function:', everyoneKnows); // ✅ This also works: we're accessing a global variable
+
+
+// --- Block Scope Example ---
+{
+    let innerBox = 'hidden';
+    console.log('Inside block:', innerBox); // ✅ This works: innerBox is accessible inside this block
+}
+
+// console.log(innerBox); // ❌ Error: innerBox is not accessible outside the block
+
+
+// --- Function Scope Example ---
+function showMessage() {
+    let message = 'Hello, world!';
+    console.log('Inside showMessage:', message); // ✅ Accessible inside the function
+}
+
+showMessage();
+// console.log(message); // ❌ Error: message is not defined outside showMessage()
