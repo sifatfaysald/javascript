@@ -55,3 +55,23 @@ if (num % 2 === 0){
 } else {
     console.log('odd');
 }
+
+// Max number method one:
+let a = 20, b = 50, c = 30;
+let biggestNumber;
+
+if(a >= b && a >= c){
+    biggestNumber = a;
+} else if (b >= a && b >= c){
+    biggestNumber = b;
+} else {
+    biggestNumber = c;
+}
+
+console.log(`biggest number is = [${biggestNumber}]`)
+
+// Max number method two:
+let x = 50, y = 70, z = 100;
+let maxNum = Math.max(x, y, z);
+console.log(`max number is = [${maxNum}]`);
+
