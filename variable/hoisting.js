@@ -3,7 +3,6 @@ console.log(greeting); // ✅ undefined — var is hoisted but value is not assi
 var greeting = "Hello!";
 console.log(greeting); // Hello!
 
-
 // --- Variable Hoisting with let ---
 // The next line causes an error if you uncomment it:
 // console.log(name); // ❌ ReferenceError — let is hoisted but not initialized (TDZ)
