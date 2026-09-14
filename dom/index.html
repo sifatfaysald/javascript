@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Practice</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: #f7f7f7;
+      color: #222;
+    }
+    #box {
+      padding: 16px;
+      background: #fff3cd;
+      border: 1px solid #ffe08a;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+    button {
+      padding: 6px 12px;
+      margin: 4px 4px 4px 0;
+      cursor: pointer;
+    }
+    ul {
+      background: #fff;
+      padding: 12px 12px 12px 32px;
+      border-radius: 6px;
+    }
+    input {
+      padding: 6px;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 8px 0;
+    }
+    #output {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Practice</h1>
+
+  <div id="box">Hello DOM</div>
+
+  <button id="colorBtn">Change Box Color</button>
+
+  <h3>Item List (event delegation দেখার জন্য)</h3>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <button id="addBtn">Add Item</button>
+  <button id="removeBtn">Remove Last Item</button>
+
+  <h3>Live Input</h3>
+  <input id="textInput" type="text" placeholder="এখানে কিছু লিখুন..." />
+  <p id="output">এখানে যা লিখবেন তাই দেখাবে</p>
+
+  <script src="./dom-practice.js"></script>
+  <script src="./event-practice.js"></script>
+</body>
+</html>
