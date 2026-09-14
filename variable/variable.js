@@ -1,38 +1,31 @@
-// --- Local Scope Example ---
-function myRoom() {
-    let secretBox = 'Money';
-    console.log('Inside myRoom:', secretBox); // This works: secretBox is accessible inside the function
+// var, let, const — declaration and reassignment
+
+var lang = "Bangla";
+
+function learn(topic) {
+  lang = topic;
+
+  if (true) {
+    let score = 5;
+    score = 10; // let can be reassigned
+    console.log(score);
+  }
+
+  if (true) {
+    const settings = {
+      volume: 5,
+    };
+    settings.volume = 6; // const object's properties can still change
+    console.log(settings);
+  }
+
+  console.log(`I am learning ${topic}`);
 }
 
-myRoom();
-// console.log(secretBox); // ❌ This would cause an error: secretBox is not accessible outside myRoom()
+learn("JavaScript");
+console.log(`Current language is ${lang}`);
 
-
-// --- Global Scope Example ---
-let everyoneKnows = 'I love tomato';
-
-function tellSecret() {
-    console.log('Inside tellSecret:', everyoneKnows); // ✅ This works: global variables are accessible inside functions
-}
-
-tellSecret();
-console.log('Outside function:', everyoneKnows); // ✅ This also works: we're accessing a global variable
-
-
-// --- Block Scope Example ---
-{
-    let innerBox = 'hidden';
-    console.log('Inside block:', innerBox); // ✅ This works: innerBox is accessible inside this block
-}
-
-// console.log(innerBox); // ❌ Error: innerBox is not accessible outside the block
-
-
-// --- Function Scope Example ---
-function showMessage() {
-    let message = 'Hello, world!';
-    console.log('Inside showMessage:', message); // ✅ Accessible inside the function
-}
-
-showMessage();
-// console.log(message); // ❌ Error: message is not defined outside showMessage()
+// const primitive cannot be reassigned
+const pi = 3.1416;
+// pi = 3.14; // ❌ TypeError: Assignment to constant variable.
+console.log(pi);
