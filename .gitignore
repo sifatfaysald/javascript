@@ -29,6 +29,13 @@ Thumbs.db      # Windows
 *.sublime-project
 *.sublime-workspace
 
+# --- AI assistant files ---
+.claude/
+CLAUDE.md
+.cursor/
+.windsurf/
+.aider*
+
 # --- Environment variables ---
 .env
 .env.local
